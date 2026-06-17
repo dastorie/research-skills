@@ -1,7 +1,7 @@
 # research-skills
 
-A small [Claude Code](https://claude.com/claude-code) plugin marketplace of
-research and academic-workflow skills.
+A small collection of research and academic-workflow skills for Claude — use them
+on the web (claude.ai), in the desktop app, or in Claude Code.
 
 > ⚠️ **For testing purposes only.** The skills here are works-in-progress
 > published for evaluation. They are not validated or supported for production or
