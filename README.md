@@ -27,7 +27,34 @@ any searching happens. In short, the pipeline:
 
 ## Installing
 
-In Claude Code:
+Most people use Claude on the **web (claude.ai)** or the **desktop app** — start
+there. Claude Code users can add the marketplace instead.
+
+### Claude Desktop & web (claude.ai)
+
+The desktop app and claude.ai share the same Skills settings. They don't use the
+plugin marketplace — you upload the skill as a ZIP.
+
+1. **Turn on code execution.** Go to **Settings → Capabilities** and enable
+   **"Code execution and file creation"** (Skills require it). Custom-skill upload
+   is available on **Pro, Max, Team, and Enterprise** plans.
+2. **Get the skill ZIP.** Download
+   [`literature-search-pipeline.zip`](https://github.com/dastorie/research-skills/raw/main/literature-search-pipeline.zip)
+   from this repo. *(It's already packaged correctly — the ZIP contains a
+   `literature-search-pipeline/` folder with `SKILL.md` inside. If you build your
+   own, keep that structure: the skill folder must be at the root of the ZIP, not
+   the loose files.)*
+3. **Upload it.** Open **[Customize → Skills](https://claude.ai/customize/skills)**,
+   click **+ Create skill** (the **+** button), and upload the ZIP. Uploaded
+   skills are private to your account and appear under Customize → Skills, where
+   you can toggle or delete them.
+4. **Use it.** Just ask a research question (e.g. *"find the literature on X"*) —
+   with the skill enabled, Claude invokes it automatically.
+
+> Team/Enterprise: an owner can also publish it org-wide from
+> **Organization settings → Skills**.
+
+### Claude Code (CLI)
 
 ```
 /plugin marketplace add dastorie/research-skills
