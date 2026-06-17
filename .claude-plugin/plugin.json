@@ -1,0 +1,8 @@
+{
+  "name": "literature-search-pipeline",
+  "description": "A guided, human-in-the-loop pipeline for searching academic literature across multiple connected sources, with two review gates, citation snowballing, an audit log, and mandatory source hyperlinks. For testing purposes only.",
+  "version": "0.1.0",
+  "author": {
+    "name": "dastorie"
+  }
+}

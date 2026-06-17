@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "research-skills",
+  "description": "Research and academic-workflow skills for Claude Code.",
+  "owner": {
+    "name": "dastorie",
+    "email": "dale.storie@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "literature-search-pipeline",
+      "description": "A guided, human-in-the-loop pipeline for searching academic literature across multiple connected sources, with two review gates, citation snowballing, an audit log, and mandatory source hyperlinks. For testing purposes only.",
+      "source": ".",
+      "author": {
+        "name": "dastorie"
+      },
+      "homepage": "https://github.com/dastorie/research-skills"
+    }
+  ]
+}
