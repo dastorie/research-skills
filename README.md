@@ -11,19 +11,23 @@ on the web (claude.ai), in the desktop app, or in Claude Code.
 
 ### `literature-search-pipeline`
 
-A guided, human-in-the-loop workflow for searching academic literature across
-every connected source at once. It runs in distinct phases with **two mandatory
-review gates** — you inspect and edit the concept blocks and the queries *before*
-any searching happens. In short, the pipeline:
+A simple, human-in-the-loop workflow for searching academic literature across
+every connected source at once, with **one review gate**: you approve the Boolean
+search before anything runs. In short, the pipeline:
 
-1. **Decomposes** your question into PICO / thematic concept blocks (review gate 1).
-2. **Builds** Boolean queries — synonyms, variant spellings, related terms, and a
-   MeSH controlled-vocabulary variant (review gate 2).
-3. **Searches** every available source simultaneously and deduplicates results.
-4. **Layers** the search iteratively with a reproducible audit log (PRISMA-friendly).
-5. **Snowballs** citations backward and forward from the strongest seed papers.
-6. **Verifies before trusting** — only reports records a real tool call returned,
-   and **every record includes a working hyperlink to its source.**
+1. **Clarifies scope** — only if your question is ambiguous, asks short
+   multiple-choice questions (date range, population, study types, etc.).
+2. **Builds** a Boolean search — synonyms, variant spellings, related terms, plus
+   an optional MeSH variant for health topics — and waits for your approval.
+3. **Searches** every available source simultaneously, deduplicates, and returns a
+   themed reference list with a short summary of each article.
+4. **Offers next steps** as a multiple-choice question:
+   - **Citation chaining** — backward and forward from seed papers you confirm.
+   - **RIS export** — a file of full records (including abstracts) to import into
+     Zotero via *File → Import*.
+
+Throughout, it **verifies before trusting** — it only reports records a real tool
+call returned — and **every record includes a working hyperlink to its source.**
 
 ## Installing
 
@@ -73,10 +77,9 @@ you need some of these connected in your Claude environment:
 - **OpenAlex** — structured metadata, citation graphs, trends, author disambiguation.
 - **academic-search** — regex queries and citation walks (PubMed / OpenAlex /
   Semantic Scholar providers).
-- **A library catalog MCP** — referenced in the skill as a generic `Library
-  Catalog` placeholder; substitute whatever institutional catalog MCP you have
-  connected (its real tool names will differ).
-- **Zotero** *(optional)* — capture the final set at the end.
+
+OpenAlex is also the source of the full records used for the RIS export. No
+Zotero connector is needed — the RIS file imports directly.
 
 If a source isn't connected, the skill says so and continues with the rest.
 

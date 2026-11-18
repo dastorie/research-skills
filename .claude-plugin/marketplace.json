@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "literature-search-pipeline",
-      "description": "A guided, human-in-the-loop pipeline for searching academic literature across multiple connected sources, with two review gates, citation snowballing, an audit log, and mandatory source hyperlinks. For testing purposes only.",
+      "description": "A simple, human-in-the-loop pipeline for searching academic literature across multiple connected sources: one Boolean approval gate, multiple-choice scope questions, optional citation chaining, RIS export for Zotero, and mandatory source hyperlinks. For testing purposes only.",
       "source": ".",
       "author": {
         "name": "dastorie"
