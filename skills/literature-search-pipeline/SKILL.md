@@ -1,6 +1,6 @@
 ---
 name: "literature-search-pipeline"
-description: "Turn a research question into an approved Boolean search, search every connected academic source at once, and return a themed, linked reference list; then offer citation chaining and an RIS export for Zotero."
+description: "Turn a research question into an approved Boolean search, then search every connected academic source (Consensus, OpenAlex, academic-search) at once and return a themed, per-article reference list where every record has a working hyperlink. Afterwards, offer citation chaining from the strongest results and an RIS export with full records for Zotero. Use this whenever the user poses a research question, asks to \"find papers / studies / the literature / evidence\" on a topic, or is gathering sources for a paper or review — even if they don't say the word \"skill.\""
 ---
 
 # Literature Search Pipeline
